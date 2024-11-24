@@ -1,0 +1,420 @@
+<style>
+    /* Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #f5f5f5;
+}
+header {
+    background: linear-gradient(135deg, #007acc, #00bfff);
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.scrolling-text {
+    background-color: #007acc; /* Background color */
+    color: white; /* Text color */
+    font-size: 1.5em; /* Font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Positioning context */
+    height: 50px; /* Height of the scrolling area */
+}
+
+.scrolling-text p {
+    position: absolute; /* Absolute positioning for scrolling */
+    animation: scroll 10s linear infinite; /* Animation properties */
+    margin: 0; /* Remove default margin */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen left */
+    }
+}
+.logo h1 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 3px 0;
+        transition: all 0.3s;
+    }
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+h1 {
+	margin: 0;
+}
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-list {
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #007acc; /* Background for dropdown */
+        z-index: 1000; /* Ensure it appears above other elements */
+        padding: 1em 0; /* Padding for dropdown */
+    }
+
+    nav li {
+        width: 100%; /* Full width for mobile items */
+        text-align: center; /* Center text */
+    }
+
+    nav a {
+        padding: 10px 0; /* Padding for links */
+        display: block; /* Make links block elements */
+    }
+}
+@media (max-width: 480px) {
+    section {
+        padding: 1em; /* Reduce padding for smaller screens */
+        margin: 0.5em; /* Reduce margin for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust font size for headings */
+    }
+}
+.responsive-img {
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Maintain aspect ratio */
+}
+form input, form select, form textarea {
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="submit"] {
+    width: 100%; /* Full width for submit button */
+    padding: 0.7em; /* Consistent padding */
+}
+@media (min-width: 769px) {
+    #Courses ol {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+        gap: 1em; /* Space between items */
+    }
+}
+#Courses {
+    background-color: #f0f8ff; /* Light background for contrast */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+#Courses ol {
+    margin-top: 10px; /* Space above the list */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+#Courses li {
+    margin-bottom: 15px; /* Space between items */
+}
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: start;
+	-webkit-text-stroke-color: rgb(233, 101, 125);
+
+	
+}
+header {
+    background: linear-gradient(135deg, #007acc, #00bfff);
+    padding: 20px 10%; /* Adjusted padding for better spacing */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1:hover {
+    color: #ffcc00; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.scrolling-text {
+    background-color: #005f99; /* Darker background for contrast */
+    color: #ffffff; /* White text color */
+    font-size: 1.8em; /* Slightly larger font size */
+    padding: 10px 0; /* Add padding for better appearance */
+    text-align: center; /* Center the text */
+}
+header {
+	background-color: skyblue;
+	padding: 20px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  nav a {
+	color: #333;
+	text-decoration: none;
+	margin: 0 10px;
+	font-weight: bold;
+  }
+  
+  nav a:hover {
+	text-decoration: underline;
+  }
+
+nav li {
+	margin: 0 1em;
+}
+
+nav a {
+	color: brown;
+    text-shadow: #f5f5f5;
+	text-decoration: none;
+	transition: ease-in-out;
+
+}
+
+section {
+	padding: 2em;
+	margin-top: 2em;
+	background-color: skyblue;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+}
+section-home {
+	height: 500px;
+}
+section h2 {
+	margin-bottom: 1em;
+}
+#About {
+    background-color: #f0f8ff; /* Light background for contrast */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Margin around the section */
+}
+#Contact {
+    background-color: #f0f8ff; /* Light background for contrast */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Margin around the section */
+}
+
+h2 {
+    color: brown; /* Heading color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+h3 {
+    color: #007acc; /* Subheading color */
+    margin-top: 20px; /* Space above subheading */
+    margin-bottom: 10px; /* Space below subheading */
+}
+
+p {
+    line-height: 1.6; /* Improve line spacing */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.social-media {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flex layout for social media links */
+    gap: 15px; /* Space between items */
+}
+
+.social-media li a {
+    text-decoration: none; /* Remove underline */
+    color: #007acc; /* Link color */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.social-media li a:hover {
+    color: #005f99; /* Darker color on hover */
+}
+
+.contact-form {
+    margin-top: 20px; /* Space above the form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 1em; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type
+h2 {
+    color: brown; /* Heading color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+h3 {
+    color: #007acc; /* Subheading color */
+    margin-top: 20px; /* Space above subheading */
+    margin-bottom: 10px; /* Space below subheading */
+}
+
+p {
+    line-height: 1.6; /* Improve line spacing */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+ul {
+    margin: 10px 0; /* Margin around the list */
+    padding-left: 20px; /* Indent list */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1em; /* Font size for list items */
+}
+
+footer {
+	padding: 1em;
+	background-color: #333;
+	color: #FFF;
+	text-align: center;
+}
+#Testimonials {
+    background-color: #e6f7ff; /* Light blue background */
+    padding: 20px; /* Add padding */
+    border-left: 5px solid #007acc; /* Left border for emphasis */
+    margin: 20px 0; /* Margin around the section */
+}
+
+blockquote {
+    font-style: italic; /* Italicize the text */
+    margin: 10px 0; /* Margin around blockquote */
+    padding-left: 10px; /* Indent the blockquote */
+    border-left: 3px solid #007acc; /* Left border for blockquote */
+}
+.registration-form {
+    background-color: #f9f9f9; /* Light background for the form */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Max width for the form */
+    margin: 20px auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 1em; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007acc; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="submit"] {
+    background-color: #007acc; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #005f99; /* Darker background on hover */
+}
+</style>
